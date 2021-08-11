@@ -1,0 +1,53 @@
+name: BasicImprovements
+version: 1.0
+main: me.mobmaker.basicimprovements.BasicImprovements
+api-version: 1.17
+prefix: BasicImprovements
+authors: [ Mobmaker ]
+softdepend: [ Vault ]
+description: A plugin designed to improve basic functionality for Minecraft servers
+website: mobmaker.xyz
+commands:
+  randomtp:
+    description: Randomly teleport yourself somwhere.
+    aliases: [ rtp ]
+    usage: |
+      /<command> - Teleports you to a random location.
+
+  ping:
+    description: Check a player's ping.
+    usage: |
+      /<command> - Checks your ping.
+      /<command> [player] - Checks another player's ping.
+
+  playtime:
+    description: Check a player's playtime.
+    usage: |
+      /<command> - Checks your playtime.
+      /<command> [player] - Checks another player's playtime.
+
+  statistic:
+    description: Obtains the statistic value for a player.
+    usage: |
+      /<command> [value] - Get your value for a statistic.
+      /<command> [player] [message] - Get any player's value for a statistic.
+
+  broadcast:
+    description: Broadcast a message to everyone.
+    aliases:  [ bc ]
+    permission: basicimprovements.admin
+    usage: |
+      /<command> [message] - Broadcasts a message.
+
+  gamemode:
+    description: Changes a player's gamemode.
+    aliases: [ gm ]
+    permission: basicimprovements.admin
+    usage: |
+      /<command> [gamemode] - Changes your gamemode.
+      /<command> [gamemode] [player] - Changes a player's gamemode.
+
+permissions:
+  basicimprovements.admin:
+    description: Permission for admin commands.
+    default: op
