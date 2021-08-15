@@ -1,5 +1,5 @@
 name: BasicImprovements
-version: 1.0
+version: 2.1
 main: me.mobmaker.basicimprovements.BasicImprovements
 api-version: 1.17
 prefix: BasicImprovements
@@ -46,6 +46,18 @@ commands:
     usage: |
       /<command> [gamemode] - Changes your gamemode.
       /<command> [gamemode] [player] - Changes a player's gamemode.
+
+  message:
+    description: Messages a player.
+    aliases: [ msg, w, whisper, tell ]
+    usage: |
+      /<command> [player] [message] - Sends a message to a player.
+
+  help:
+    description: Returns a help message.
+    aliases: [ h ]
+    usage: |
+      /<command> - Returns a help message.
 
 permissions:
   basicimprovements.admin:

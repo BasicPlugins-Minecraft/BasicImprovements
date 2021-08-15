@@ -3,6 +3,8 @@ package me.mobmaker.basicimprovements;
 import me.mobmaker.basicimprovements.commands.CommandsInitializer;
 import me.mobmaker.basicimprovements.teleportation.TPCancellationEvents;
 import me.mobmaker.basicimprovements.teleportation.TPData;
+import me.mobmaker.basicimprovements.utilities.Data;
+import me.mobmaker.basicimprovements.utilities.JoinEvent;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -24,8 +26,9 @@ public final class BasicImprovements extends JavaPlugin {
         } else isEcon = true;
         TPData.init(instance);
         Bukkit.getPluginManager().registerEvents(new TPCancellationEvents(), instance);
+        Bukkit.getPluginManager().registerEvents(new JoinEvent(), instance);
         CommandsInitializer.init(instance);
-        //this.saveDefaultConfig();
+        Data.loadSources(instance);
     }
 
     public static BasicImprovements instance() {

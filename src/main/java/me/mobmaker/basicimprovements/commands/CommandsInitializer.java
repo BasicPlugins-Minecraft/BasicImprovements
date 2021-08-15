@@ -9,8 +9,11 @@ public class CommandsInitializer {
         pl.getCommand("broadcast").setExecutor(new BroadcastCommand());
         pl.getCommand("randomtp").setExecutor(new RandomTPCommand());
         pl.getCommand("statistic").setExecutor(new StatisticCommand());
-        pl.getCommand("playtime").setExecutor(new StatisticCommand());
+        pl.getCommand("statistic").setTabCompleter(new StatisticCommand());
+        pl.getCommand("playtime").setExecutor(new PlaytimeCommand());
         pl.getCommand("gamemode").setExecutor(new GamemodeCommand());
+        pl.getCommand("message").setExecutor(new MessageCommand());
+        pl.getCommand("help").setExecutor(new HelpCommand());
     }
 
 }

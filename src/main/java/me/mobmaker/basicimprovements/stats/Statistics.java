@@ -8,6 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 
+import java.util.List;
 import java.util.UUID;
 
 public enum Statistics {
@@ -117,6 +118,7 @@ public enum Statistics {
                     player.getName(), "has", title, String.valueOf(finalStatistic), theUnits);
         }
     }
+
 }
 // /statistic [player] animals_bred
 //  [player] has [title] [amount/divisor] [units].

@@ -14,8 +14,9 @@ public class GamemodeCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        GameMode mode = Aliases.gameModes(args[0]);
+        GameMode mode;
         if (args.length == 1) {
+            mode = Aliases.gameModes(args[0]);
             if (sender instanceof Player p) {
                 if (mode != null) {
                     p.setGameMode(mode);
@@ -26,6 +27,7 @@ public class GamemodeCommand implements CommandExecutor {
             }
         }
         if (args.length == 2) {
+            mode = Aliases.gameModes(args[0]);
             Player t = Bukkit.getPlayer(args[1]);
             if (t == null) {
                 sender.sendMessage(Messages.PLUGIN_INVALID_PLAYER.get());
